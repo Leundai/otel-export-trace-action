@@ -121,7 +121,7 @@ async function getWorkflowRunArtifactMap(
           url: downloadResponse.url,
           responseType: "arraybuffer",
         });
-        const buf = response.data as Buffer;
+        const buf = new Uint8Array(response.data as ArrayBuffer);
         const zip = await JSZip.loadAsync(buf);
         const writeStream = fs.createWriteStream(`${artifact.name}.log`);
         try {

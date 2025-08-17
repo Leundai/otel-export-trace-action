@@ -7,8 +7,8 @@ import { Octokit } from "@octokit/rest";
 import { Context } from "@actions/github/lib/context";
 import { RestEndpointMethodTypes } from "@octokit/plugin-rest-endpoint-methods";
 import axios from "axios";
-import fs from "fs";
-import path from "path";
+import * as fs from "fs";
+import * as path from "path";
 import { mock, mockDeep } from "jest-mock-extended";
 
 jest.mock("axios");
