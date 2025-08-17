@@ -4,6 +4,9 @@
   "version": "1.8.0",
   "description": "Github Action to export Open Telemetry traces for Workflow runs",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "prepare": "husky install",
     "lint:fix": "eslint --cache --fix .",
@@ -30,6 +33,7 @@
     "@opentelemetry/resources": "^1.1.0",
     "@opentelemetry/sdk-trace-base": "^1.1.0",
     "@opentelemetry/semantic-conventions": "^1.1.0",
+    "@tsconfig/node10": "^1.0.11",
     "axios": "^0.25.0",
     "jszip": "^3.8.0",
     "junit2json": "^3.1.2"
